@@ -334,7 +334,7 @@
                 <!-- Nəticə təfərrüatları burada göstəriləcək -->
             </div>
             
-            <button onclick="restart()">Yeni Test Yarad</button>
+            <button onclick="toStart()">Yeni Test Yarad</button>
         </div>
     </div>
 
@@ -622,6 +622,49 @@
                 }
             }
         };
+
+
+        // İlk sual blokunu sonradan bərpa etmək üçün saxlayırıq
+let initialQuestionsHTML = '';
+window.addEventListener('DOMContentLoaded', () => {
+  const qc = document.getElementById('questions-container');
+  if (qc) initialQuestionsHTML = qc.innerHTML;
+});
+
+// Start-a qayıt və hər şeyi sıfırla
+function toStart() {
+  // URL-dən ?data= parametrlərini sil
+  history.replaceState(null, '', window.location.pathname);
+
+  // State reset
+  currentStep = 1;
+  questions = [];
+  userAnswers = [];
+  currentQuestionIndex = 0;
+  totalQuestions = 3;
+  questionCount = 1;
+
+  // UI təmizlənməsi
+  document.getElementById('userName').value = '';
+  document.getElementById('result-detail').innerHTML = '';
+  document.getElementById('score').textContent = '0/3';
+  document.getElementById('result-message').textContent = 'Təbriklər! Testi tamamladın.';
+  document.getElementById('progress-bar').style.width = '0%';
+  document.getElementById('next-btn').textContent = 'Növbəti Sual';
+
+  // Suallar bölməsini ilkin hala qaytar
+  if (initialQuestionsHTML) {
+    document.getElementById('questions-container').innerHTML = initialQuestionsHTML;
+  }
+
+  // Step keçidləri
+  document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+  document.getElementById('step1').classList.add('active');
+
+  // Başlığı da default et (istəsən)
+  document.getElementById('test-title').textContent = 'Test';
+}
+
     </script>
 </body>
 </html>
