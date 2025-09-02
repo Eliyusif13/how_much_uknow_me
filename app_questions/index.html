@@ -14,7 +14,7 @@
         }
         
         body {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            background: linear-gradient(135deg, #6a11cb 0%, #f4b8ff 100%);
             color: #333;
             min-height: 100vh;
             display: flex;
@@ -22,7 +22,7 @@
             align-items: center;
             padding: 20px;
         }
-        
+
         .container {
             background-color: white;
             border-radius: 15px;
@@ -224,14 +224,26 @@
             .welcome-card {
                 min-width: 100%;
             }
+
+         
+        }
+        .sectionLater{
+            font-size: 12px;
+            font-optical-sizing: 12px;
+            font-style: italic;
+            align-items: center;
+        }
+        .sectionContainer{
+            padding-right: 0px;
+            align-items: end;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Sadıqov Əliyusif tərəfindən yaradılan <br> Dostluq Testi</h1>
-        <h2>Məni Nə Qədər Tanıyırsan?</h2>
-        
+                   <h1 style="color: #4911cb;">Dostluq Testi</h1>
+        <p style="color: rgb(49, 16, 199); font-style: italic;">Bu tətbiq ilə dostlarına özün haqqında test hazırlaya və səni nə qədər yaxşı tanıdıqlarını ölçə bilərsən.</p>
+
         <div class="step active" id="step1">
             <div class="welcome-cards">
                 <div class="welcome-card">
@@ -248,11 +260,11 @@
                 </div>
             </div>
             
-            <p>Bu tətbiq ilə dostlarına özün haqqında test hazırlaya və səni nə qədər yaxşı tanıdıqlarını ölçə bilərsən.</p>
             <p>İlk olaraq, aşağıya adını yaz:</p>
             <input type="text" id="userName" placeholder="Adın nədir?">
             <button onclick="nextStep(2)">Davam et</button>
-        </div>
+              <div class="sectionContainer"><section class="sectionLater"><p style="margin: 6px 0px 0px 282px;">Bu tətbiq Sadıqov Əliyusif tərəində yaradılmışdır.</p></section></div> 
+ </div>
         
         <div class="step" id="step2">
             <h2>Testini Hazırla</h2>
@@ -343,7 +355,7 @@
                     alert('Zəhmət olmasa adını daxil et!');
                     return;
                 }
-                document.getElementById('test-title').textContent = `${userName} - Məni Nə Qədər Tanıyırsan?`;
+                document.getElementById('test-title').textContent = `${userName} - dostunu nə qədər tanıyırsanonu görəcəyik yekunda 😁`;
             }
             
             document.querySelector(`#step${currentStep}`).classList.remove('active');
@@ -603,7 +615,7 @@
                     const userName = decodedData.name;
                     questions = decodedData.questions;
                     
-                    document.getElementById('test-title').textContent = `${userName} - Məni Nə Qədər Tanıyırsan?`;
+                    document.getElementById('test-title').textContent = `${userName} -  dostunu nə qədər tanıyırsan onu görəcəyik yekunda 🧐`;
                     tryTest();
                 } catch (e) {
                     console.error('Məlumat oxuma xətası:', e);
