@@ -240,12 +240,14 @@
 
         }
 
-        .sectionLater {
-            font-size: 12px;
-            font-optical-sizing: 12px;
-            font-style: italic;
+        .sectionContainer {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
+            padding-right: 0px;
+            padding-left: 0px;
         }
+
 
         .sectionContainer {
             padding-right: 0px;
@@ -277,7 +279,7 @@
 <body>
     <div class="container">
         <div class="header">
-             <div id="imageContainer">
+            <div id="imageContainer">
                 <img class="test-image" src="https://cdn-icons-png.flaticon.com/128/4841/4841078.png" alt="imga" x>
             </div>
             <div id="textContainer">
@@ -312,11 +314,13 @@
             <p>İlk olaraq, aşağıya adını yaz:</p>
             <input type="text" id="userName" placeholder="Adın nədir?">
             <button onclick="nextStep(2)">Davam et</button>
+
             <div class="sectionContainer">
                 <section class="sectionLater">
-                    <p style="margin: 6px 0px 0px 252px;">Bu tətbiq Sadıqov Əliyusif tərəində yaradılmışdır.</p>
+                    <p style="margin: 6px 0px 0px 0px;">Bu tətbiq Sadıqov Əliyusif tərəində yaradılmışdır.</p>
                 </section>
             </div>
+
         </div>
 
         <div class="step" id="step2">
