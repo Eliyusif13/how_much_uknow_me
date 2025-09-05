@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="az">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,7 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
             background: linear-gradient(135deg, #6a11cb 0%, #f4b8ff 100%);
             color: #333;
@@ -24,7 +25,7 @@
         }
 
         .container {
-            background-color: white;
+            background-color: #ffd3d3;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             width: 100%;
@@ -33,44 +34,46 @@
             margin: 20px 0;
             transition: all 0.3s ease;
         }
-        
+
         h1 {
             text-align: center;
             color: #2c3e50;
             margin-bottom: 20px;
             font-size: 2.2rem;
         }
-        
+
         h2 {
             color: #6a11cb;
             margin: 15px 0;
             font-size: 1.5rem;
         }
-        
+
         p {
             margin-bottom: 15px;
             line-height: 1.6;
         }
-        
+
         .step {
             display: none;
         }
-        
+
         .step.active {
             display: block;
             animation: fadeIn 0.5s ease;
         }
-        
-        input, textarea {
+
+        input,
+        textarea {
             width: 100%;
             padding: 12px;
+            background-color: #ffe4e4;
             margin-bottom: 2px;
             margin-top: 5px;
-            border: 1px solid #d5fbff;
+            border: 1px solid #07a6ff;
             border-radius: 8px;
             font-size: 16px;
         }
-        
+
         button {
             background: linear-gradient(to right, #6a11cb, #2575fc);
             color: white;
@@ -83,27 +86,27 @@
             transition: all 0.3s ease;
             margin-top: 10px;
         }
-        
+
         button:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-        
+
         .question {
-            background-color: #f9f9f9;
+            background-color: #ffe7e7;
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 15px;
             border-left: 4px solid #6a11cb;
         }
-        
+
         .options {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10px;
             margin-top: 10px;
         }
-        
+
         .option {
             padding: 12px;
             background-color: #eef;
@@ -112,29 +115,29 @@
             transition: all 0.2s;
             text-align: center;
         }
-        
+
         .option:hover {
             background-color: #dde;
         }
-        
+
         .option.selected {
             background-color: #6a11cb;
             color: white;
         }
-        
+
         .result {
             text-align: center;
             font-size: 1.2rem;
             margin: 20px 0;
         }
-        
+
         .score {
             font-size: 3rem;
             font-weight: bold;
             color: #6a11cb;
             margin: 20px 0;
         }
-        
+
         .share-link {
             background-color: #f0f0f0;
             padding: 15px;
@@ -142,12 +145,12 @@
             margin: 20px 0;
             word-break: break-all;
         }
-        
+
         .copy-btn {
             background: #28a745;
             margin-top: 5px;
         }
-        
+
         .progress-bar {
             height: 10px;
             background-color: #eee;
@@ -155,21 +158,21 @@
             margin: 20px 0;
             overflow: hidden;
         }
-        
+
         .progress {
             height: 100%;
             background: linear-gradient(to right, #6a11cb, #2575fc);
             width: 0%;
             transition: width 0.3s ease;
         }
-        
+
         .welcome-cards {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
             margin: 20px 0;
         }
-        
+
         .welcome-card {
             flex: 1;
             min-width: 150px;
@@ -179,72 +182,116 @@
             border-radius: 10px;
             text-align: center;
         }
-        
+
         .welcome-card i {
             font-size: 2rem;
             margin-bottom: 10px;
         }
-        
+
         .option-input {
             display: flex;
             gap: 10px;
             margin-bottom: 10px;
         }
-        
+
         .option-input input {
             flex: 1;
             background-color: d5fbff;
         }
-        
+
         .remove-btn {
             background: #9f1038;
             padding: 10px;
         }
-        
+
         .add-option-btn {
             background: #28a784;
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         @media (max-width: 600px) {
             .options {
                 grid-template-columns: 1fr;
             }
-            
+
             .container {
                 padding: 20px;
             }
-            
+
             h1 {
                 font-size: 1.8rem;
             }
-            
+
             .welcome-card {
                 min-width: 100%;
             }
 
-         
+
         }
-        .sectionLater{
+
+        .sectionLater {
             font-size: 12px;
             font-optical-sizing: 12px;
             font-style: italic;
             align-items: center;
         }
-        .sectionContainer{
+
+        .sectionContainer {
             padding-right: 0px;
             align-items: end;
         }
+
+        img {
+            max-width: 100%;
+            height: 50px;
+            margin: 0 auto;
+            padding-bottom: 14px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            /* Başlıq ilə şəkil arasındakı məsafə */
+        }
+
+        #textContainer {
+            padding-right: 24px;
+            padding-left: 24px;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
-                   <h1 style="color: #4911cb;">Dostluq Testi</h1>
-        <p style="color: rgb(49, 16, 199); font-style: italic;">Bu tətbiq ilə dostlarına özün haqqında test hazırlaya və səni nə qədər yaxşı tanıdıqlarını ölçə bilərsən.</p>
+        <div class="header">
+             <div id="imageContainer">
+                <img class="test-image" src="https://cdn-icons-png.flaticon.com/128/4841/4841078.png" alt="imga" x>
+            </div>
+            <div id="textContainer">
+                <h1 style="color: #4911cb;">Dostluq Testi</h1>
+            </div>
+            <div id="imageContainer">
+                <img class="test-image" src="https://cdn-icons-png.flaticon.com/128/3220/3220788.png" alt="imga" x>
+            </div>
+        </div>
+
+        <p style="color: rgb(49, 16, 199); font-style: italic;">Bu tətbiq ilə dostlarına özün haqqında test
+            hazırlaya və
+            səni nə qədər yaxşı tanıdıqlarını ölçə bilərsən.</p>
+
 
         <div class="step active" id="step1">
             <div class="welcome-cards">
@@ -261,81 +308,89 @@
                     <h3>Nəticələri Gör</h3>
                 </div>
             </div>
-            
+
             <p>İlk olaraq, aşağıya adını yaz:</p>
             <input type="text" id="userName" placeholder="Adın nədir?">
             <button onclick="nextStep(2)">Davam et</button>
-              <div class="sectionContainer"><section class="sectionLater"><p style="margin: 6px 0px 0px 282px;">Bu tətbiq Sadıqov Əliyusif tərəində yaradılmışdır.</p></section></div> 
- </div>
-        
+            <div class="sectionContainer">
+                <section class="sectionLater">
+                    <p style="margin: 6px 0px 0px 282px;">Bu tətbiq Sadıqov Əliyusif tərəində yaradılmışdır.</p>
+                </section>
+            </div>
+        </div>
+
         <div class="step" id="step2">
             <h2>Testini Hazırla</h2>
             <p>İndi sənə 3 suallıq test hazırlayacağıq. Hər sual üçün düzgün cavabı və 3 səhv seçim daxil etməlisən.</p>
-            
+
             <div id="questions-container">
                 <div class="question" id="question1">
                     <h3>Sual 1</h3>
                     <input type="text" placeholder="Sual mətni (Məs: Ən sevdiyim yemək nədir?)" id="q1-text" required>
                     <input type="text" placeholder="Düzgün cavab" id="q1-correct" required>
-                    
+
                     <div id="q1-options">
                         <div class="option-input">
                             <input type="text" placeholder="Səhv cavab 1" id="q1-wrong1" required>
-                            <button class="remove-btn" onclick="removeOption(1, 1)"><i class="fas fa-times"></i></button>
+                            <button class="remove-btn" onclick="removeOption(1, 1)"><i
+                                    class="fas fa-times"></i></button>
                         </div>
                         <div class="option-input">
                             <input type="text" placeholder="Səhv cavab 2" id="q1-wrong2" required>
-                            <button class="remove-btn" onclick="removeOption(1, 2)"><i class="fas fa-times"></i></button>
+                            <button class="remove-btn" onclick="removeOption(1, 2)"><i
+                                    class="fas fa-times"></i></button>
                         </div>
                         <div class="option-input">
                             <input type="text" placeholder="Səhv cavab 3" id="q1-wrong3" required>
-                            <button class="remove-btn" onclick="removeOption(1, 3)"><i class="fas fa-times"></i></button>
+                            <button class="remove-btn" onclick="removeOption(1, 3)"><i
+                                    class="fas fa-times"></i></button>
                         </div>
                     </div>
-                    
+
                     <button class="add-option-btn" onclick="addOption(1)">Seçim Əlavə Et</button>
                 </div>
             </div>
-            
+
             <button onclick="addQuestion()">Yeni Sual Əlavə Et</button>
             <button onclick="saveQuestions()">Testi Tamamla</button>
         </div>
-        
+
         <div class="step" id="step3">
             <h2>Testin Hazırdır!</h2>
-            <p>Təbriklər! Testin uğurla yaradıldı. Aşağıdakı linki dostlarına göndər və səni nə qədər yaxşı tanıdıqlarını gör.</p>
-            
+            <p>Təbriklər! Testin uğurla yaradıldı. Aşağıdakı linki dostlarına göndər və səni nə qədər yaxşı
+                tanıdıqlarını gör.</p>
+
             <div class="share-link" id="shareLink">
                 Link yüklənir...
             </div>
-            
+
             <button class="copy-btn" onclick="copyLink()">Linki Kopyala</button>
             <button onclick="tryTest()">Testi Sına</button>
         </div>
-        
+
         <div class="step" id="step4">
             <h2 id="test-title">Test</h2>
             <div class="progress-bar">
                 <div class="progress" id="progress-bar"></div>
             </div>
-            
+
             <div id="test-container">
                 <!-- Test məzmunu JavaScript ilə buraya əlavə olunacaq -->
             </div>
-            
+
             <button id="next-btn" onclick="nextQuestion()">Növbəti Sual</button>
         </div>
-        
+
         <div class="step" id="step5">
             <h2>Test Nəticəsi</h2>
             <p id="result-message">Təbriklər! Testi tamamladın.</p>
-            
+
             <div class="score" id="score">0/3</div>
-            
+
             <div id="result-detail">
                 <!-- Nəticə təfərrüatları burada göstəriləcək -->
             </div>
-            
+
             <button onclick="toStart()">Yeni Test Yarad</button>
         </div>
     </div>
@@ -348,7 +403,7 @@
         let currentQuestionIndex = 0;
         let totalQuestions = 3;
         let questionCount = 1;
-        
+
         // Addım keçidləri
         function nextStep(step) {
             if (step === 2) {
@@ -359,19 +414,19 @@
                 }
                 document.getElementById('test-title').textContent = `${userName} - dostunu nə qədər tanıyırsanonu görəcəyik yekunda 😁`;
             }
-            
+
             document.querySelector(`#step${currentStep}`).classList.remove('active');
             currentStep = step;
             document.querySelector(`#step${currentStep}`).classList.add('active');
         }
-        
+
         // Yeni sual əlavə et
         function addQuestion() {
             if (questionCount >= totalQuestions) {
                 alert(`Maksimum ${totalQuestions} sual əlavə edə bilərsiniz.`);
                 return;
             }
-            
+
             questionCount++;
             const newQuestion = document.createElement('div');
             newQuestion.className = 'question';
@@ -398,25 +453,25 @@
                 
                 <button class="add-option-btn" onclick="addOption(${questionCount})">Seçim Əlavə Et</button>
             `;
-            
+
             document.getElementById('questions-container').appendChild(newQuestion);
         }
-        
+
         // Seçim əlavə et
         function addOption(questionId) {
             const optionsContainer = document.getElementById(`q${questionId}-options`);
             const optionCount = optionsContainer.children.length + 1;
-            
+
             const newOption = document.createElement('div');
             newOption.className = 'option-input';
             newOption.innerHTML = `
                 <input type="text" placeholder="Səhv cavab ${optionCount}" id="q${questionId}-wrong${optionCount}" required>
                 <button class="remove-btn" onclick="removeOption(${questionId}, ${optionCount})"><i class="fas fa-times"></i></button>
             `;
-            
+
             optionsContainer.appendChild(newOption);
         }
-        
+
         // Seçimi sil
         function removeOption(questionId, optionId) {
             const optionsContainer = document.getElementById(`q${questionId}-options`);
@@ -424,27 +479,27 @@
                 alert('Ən azı 3 səhv cavab olmalıdır.');
                 return;
             }
-            
+
             const optionToRemove = document.querySelector(`#q${questionId}-options .option-input:nth-child(${optionId})`);
             if (optionToRemove) {
                 optionsContainer.removeChild(optionToRemove);
             }
         }
-        
+
         // Sualları yadda saxla
         function saveQuestions() {
             const userName = document.getElementById('userName').value;
             questions = [];
-            
+
             for (let i = 1; i <= questionCount; i++) {
                 const questionText = document.getElementById(`q${i}-text`).value;
                 const correctAnswer = document.getElementById(`q${i}-correct`).value;
-                
+
                 if (!questionText || !correctAnswer) {
                     alert(`Zəhmət olmasa ${i}. sual üçün bütün sahələri doldur!`);
                     return;
                 }
-                
+
                 // Səhv cavabları yığ
                 const wrongAnswers = [];
                 const optionsContainer = document.getElementById(`q${i}-options`);
@@ -454,12 +509,12 @@
                         wrongAnswers.push(input.value);
                     }
                 }
-                
+
                 if (wrongAnswers.length < 3) {
                     alert(`Zəhmət olmasa ${i}. sual üçün ən azı 3 səhv cavab daxil et!`);
                     return;
                 }
-                
+
                 // Sualı yadda saxla
                 questions.push({
                     question: questionText,
@@ -467,21 +522,21 @@
                     options: shuffleArray([correctAnswer, ...wrongAnswers])
                 });
             }
-            
+
             // Paylaşılacaq linki yarat
             const dataStr = JSON.stringify({
                 name: userName,
                 questions: questions
             });
-            
+
             const encodedData = encodeURIComponent(dataStr);
             const currentURL = window.location.href.split('?')[0];
             const shareURL = `${currentURL}?data=${encodedData}`;
-            
+
             document.getElementById('shareLink').textContent = shareURL;
             nextStep(3);
         }
-        
+
         // Massivi qarışdır (Fisher-Yates alqoritmi)
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
@@ -490,7 +545,7 @@
             }
             return array;
         }
-        
+
         // Linki kopyala
         function copyLink() {
             const linkText = document.getElementById('shareLink').textContent;
@@ -498,7 +553,7 @@
                 .then(() => alert('Link müvəffəqiyyətlə kopyalandı!'))
                 .catch(err => console.error('Kopyalama xətası: ', err));
         }
-        
+
         // Testi sına
         function tryTest() {
             userAnswers = [];
@@ -506,48 +561,48 @@
             loadQuestion();
             nextStep(4);
         }
-        
+
         // Sualı yüklə
         function loadQuestion() {
             const testContainer = document.getElementById('test-container');
             const progressBar = document.getElementById('progress-bar');
             const nextBtn = document.getElementById('next-btn');
-            
+
             // İlerləmə çubuğunu yenilə
             progressBar.style.width = `${(currentQuestionIndex / questions.length) * 100}%`;
-            
+
             // Son sualsa düymə mətnini dəyişdir
             if (currentQuestionIndex === questions.length - 1) {
                 nextBtn.textContent = 'Testi Bitir';
             } else {
                 nextBtn.textContent = 'Növbəti Sual';
             }
-            
+
             const currentQuestion = questions[currentQuestionIndex];
             testContainer.innerHTML = `
                 <div class="question">
                     <h3>Sual ${currentQuestionIndex + 1}/${questions.length}</h3>
                     <p>${currentQuestion.question}</p>
                     <div class="options">
-                        ${currentQuestion.options.map(option => 
-                            `<div class="option" onclick="selectOption(this)">${option}</div>`
-                        ).join('')}
+                        ${currentQuestion.options.map(option =>
+                `<div class="option" onclick="selectOption(this)">${option}</div>`
+            ).join('')}
                     </div>
                 </div>
             `;
         }
-        
+
         // Seçim seç
         function selectOption(element) {
             // Əvvəlki seçimləri təmizlə
             document.querySelectorAll('.option').forEach(opt => {
                 opt.classList.remove('selected');
             });
-            
+
             // Yeni seçimi qeyd et
             element.classList.add('selected');
         }
-        
+
         // Növbəti suala keç
         function nextQuestion() {
             const selectedOption = document.querySelector('.option.selected');
@@ -555,10 +610,10 @@
                 alert('Zəhmət olmasa bir cavab seç!');
                 return;
             }
-            
+
             // Cavabı kaydet
             userAnswers.push(selectedOption.textContent);
-            
+
             // Sonraki suala keç veya testi bitir
             if (currentQuestionIndex < questions.length - 1) {
                 currentQuestionIndex++;
@@ -567,24 +622,24 @@
                 showResults();
             }
         }
-        
+
         // Nəticələri göstər
         function showResults() {
             let score = 0;
             let resultDetails = '';
-            
+
             for (let i = 0; i < questions.length; i++) {
                 if (userAnswers[i] === questions[i].correctAnswer) {
                     score++;
-                    resultDetails += `<p><b>Sual ${i+1}:</b> Doğru! 🎉</p>`;
+                    resultDetails += `<p><b>Sual ${i + 1}:</b> Doğru! 🎉</p>`;
                 } else {
-                    resultDetails += `<p><b>Sual ${i+1}:</b> Yanlış! Doğru cavab: ${questions[i].correctAnswer}</p>`;
+                    resultDetails += `<p><b>Sual ${i + 1}:</b> Yanlış! Doğru cavab: ${questions[i].correctAnswer}</p>`;
                 }
             }
-            
+
             document.getElementById('score').textContent = `${score}/${questions.length}`;
             document.getElementById('result-detail').innerHTML = resultDetails;
-            
+
             // Nəticə mesajını təyin et
             let message = '';
             if (score === questions.length) {
@@ -596,27 +651,27 @@
             } else {
                 message = 'Daha çox vaxt keçirməyiniz lazımdır! 😅';
             }
-            
+
             document.getElementById('result-message').textContent = message;
             nextStep(5);
         }
-        
+
         // Yenidən başlat
         function restart() {
             window.location.reload();
         }
-        
+
         // Səhifə yükləndiyində URL-dən məlumat oxu (paylaşılıbsa)
-        window.onload = function() {
+        window.onload = function () {
             const urlParams = new URLSearchParams(window.location.search);
             const dataParam = urlParams.get('data');
-            
+
             if (dataParam) {
                 try {
                     const decodedData = JSON.parse(decodeURIComponent(dataParam));
                     const userName = decodedData.name;
                     questions = decodedData.questions;
-                    
+
                     document.getElementById('test-title').textContent = `${userName} -  dostunu nə qədər tanıyırsan onu görəcəyik yekunda 🧐`;
                     tryTest();
                 } catch (e) {
@@ -627,46 +682,47 @@
 
 
         // İlk sual blokunu sonradan bərpa etmək üçün saxlayırıq
-let initialQuestionsHTML = '';
-window.addEventListener('DOMContentLoaded', () => {
-  const qc = document.getElementById('questions-container');
-  if (qc) initialQuestionsHTML = qc.innerHTML;
-});
+        let initialQuestionsHTML = '';
+        window.addEventListener('DOMContentLoaded', () => {
+            const qc = document.getElementById('questions-container');
+            if (qc) initialQuestionsHTML = qc.innerHTML;
+        });
 
-// Start-a qayıt və hər şeyi sıfırla
-function toStart() {
-  // URL-dən ?data= parametrlərini sil
-  history.replaceState(null, '', window.location.pathname);
+        // Start-a qayıt və hər şeyi sıfırla
+        function toStart() {
+            // URL-dən ?data= parametrlərini sil
+            history.replaceState(null, '', window.location.pathname);
 
-  // State reset
-  currentStep = 1;
-  questions = [];
-  userAnswers = [];
-  currentQuestionIndex = 0;
-  totalQuestions = 3;
-  questionCount = 1;
+            // State reset
+            currentStep = 1;
+            questions = [];
+            userAnswers = [];
+            currentQuestionIndex = 0;
+            totalQuestions = 3;
+            questionCount = 1;
 
-  // UI təmizlənməsi
-  document.getElementById('userName').value = '';
-  document.getElementById('result-detail').innerHTML = '';
-  document.getElementById('score').textContent = '0/3';
-  document.getElementById('result-message').textContent = 'Təbriklər! Testi tamamladın.';
-  document.getElementById('progress-bar').style.width = '0%';
-  document.getElementById('next-btn').textContent = 'Növbəti Sual';
+            // UI təmizlənməsi
+            document.getElementById('userName').value = '';
+            document.getElementById('result-detail').innerHTML = '';
+            document.getElementById('score').textContent = '0/3';
+            document.getElementById('result-message').textContent = 'Təbriklər! Testi tamamladın.';
+            document.getElementById('progress-bar').style.width = '0%';
+            document.getElementById('next-btn').textContent = 'Növbəti Sual';
 
-  // Suallar bölməsini ilkin hala qaytar
-  if (initialQuestionsHTML) {
-    document.getElementById('questions-container').innerHTML = initialQuestionsHTML;
-  }
+            // Suallar bölməsini ilkin hala qaytar
+            if (initialQuestionsHTML) {
+                document.getElementById('questions-container').innerHTML = initialQuestionsHTML;
+            }
 
-  // Step keçidləri
-  document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
-  document.getElementById('step1').classList.add('active');
+            // Step keçidləri
+            document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+            document.getElementById('step1').classList.add('active');
 
-  // Başlığı da default et (istəsən)
-  document.getElementById('test-title').textContent = 'Test';
-}
+            // Başlığı da default et (istəsən)
+            document.getElementById('test-title').textContent = 'Test';
+        }
 
     </script>
 </body>
+
 </html>
